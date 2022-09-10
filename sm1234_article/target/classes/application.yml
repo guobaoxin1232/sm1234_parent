@@ -1,0 +1,23 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: sm1234-article
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/guobaoxin?characterEncoding=UTF8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:7000/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: article.com  如果需要在eureka注册多个服务，不能写死instance-id
